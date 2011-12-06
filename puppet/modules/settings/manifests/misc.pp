@@ -6,6 +6,8 @@ class settings::misc{
  		      "gcc",
 		      "pastebinit.noarch", 
 	              "thunderbird",
+		      "links",
+		      "elinks",
 		   ]
 
     package { $misc_packages:
