@@ -4,3 +4,6 @@
 $modulepath="./modules" 
 include hosts
 include multimedia
+include virtualize
+include settings
+include settings::sys_date
