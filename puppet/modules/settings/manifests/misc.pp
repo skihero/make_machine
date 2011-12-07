@@ -8,6 +8,7 @@ class settings::misc{
 	              "thunderbird",
 		      "links",
 		      "elinks",
+		      "filezilla", 
 		   ]
 
     package { $misc_packages:
