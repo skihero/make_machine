@@ -1,5 +1,5 @@
-# 
-# Set the sys_date
+# Misc settings for the machine 
+
 class settings::misc{
 
     $misc_packages = ["nmap",
@@ -8,6 +8,7 @@ class settings::misc{
 	              "thunderbird",
 		      "links",
 		      "elinks",
+		      "vim",
 		      "filezilla", 
 		   ]
 
