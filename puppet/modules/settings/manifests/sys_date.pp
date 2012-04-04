@@ -2,7 +2,7 @@
 # Set the sys_date
 class settings::sys_date{
 
-    $date_packages = ["ntpdate",
+    $date_packages = ["ntp",
 		   ]
 
     package { $date_packages:
