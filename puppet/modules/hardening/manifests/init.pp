@@ -4,6 +4,8 @@
 
 class hardening { 
 	
-	include "hardening::services" 
+ 	include "hardening::services" 
+
 }
+	
 
