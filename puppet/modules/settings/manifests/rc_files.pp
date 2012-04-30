@@ -9,10 +9,17 @@ class settings::rc_files{
 		ensure => installed, 
 	    } 
 
+    # Clone the repository first 
     exec { "clone_rcfiles":
-    command => "ntpdate  0.pool.ntp.org",
-    path    => "/usr/local/bin/:/bin/:/usr/bin/",
-    # path    => [ "/usr/local/bin/", "/bin/" ],  # alternative syntax
+     command => "cd ~ && git clone https://skihero@github.com/skihero/dotfiles.git ", 
+     path    => "/usr/local/bin/:/bin/:/usr/bin/",
     }
+
+    # This should happen after the clone 
+    exec { "install_rcfiles":
+     command => "cd ~/dotfiles && ./install.sh" , 
+     path => "/usr/local/bin/:/bin/:/usr/bin/", 
+     require => Exec ['clone_rcfiles'], 
+    } 
 }
 
